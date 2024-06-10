@@ -80,6 +80,7 @@ nav ul {
     width: 100%; /* Width same as the parent */
     box-sizing: border-box; /* Include padding in the box model */
     min-width: 120px; /* Minimum width to ensure uniformity */
+align-items: center;
 }
 
 nav ul li {
