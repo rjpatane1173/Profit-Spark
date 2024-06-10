@@ -110,6 +110,15 @@ nav ul li a:hover {
 .carousel-container {
     overflow-x: hidden;
 }
+.carousel {
+    width: 10rem;
+    align-content: center;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    position: relative;
+      background-blend-mode: lighten;
+}
+
 .carousel-inner {
     display: flex;
     transition: transform 0.5s ease-in-out;
@@ -127,10 +136,10 @@ nav ul li a:hover {
 }
 
 @keyframes slide {
-    0%, 20% { transform: translateX(0); }
-    25%, 45% { transform: translateX(-100%); }
-    50%, 70% { transform: translateX(-200%); }
-    75%, 95% { transform: translateX(-300%); }
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
     100% { transform: translateX(-400%); }
 }
 
