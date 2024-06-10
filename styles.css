@@ -107,7 +107,9 @@ nav ul li a:hover {
     text-align: center;
 }
 /* Define animation for sliding images */
-
+.carousel-container {
+    overflow-x: hidden;
+}
 .carousel-inner {
     display: flex;
     transition: transform 0.5s ease-in-out;
