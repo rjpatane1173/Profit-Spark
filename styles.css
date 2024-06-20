@@ -254,6 +254,10 @@ nav ul li a:hover {
 }
 
 
+
+
+
+/* Base styles for the carousel */
 .content {
     padding: 20px;
     text-align: center;
@@ -316,24 +320,32 @@ nav ul li a:hover {
 
 #service {
     background-color: #a6b1e1;
+    padding: 40px 0;
+    border-radius: 8px;
 }
 
 .services-container {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
+}
+
+.service-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .service-item {
     text-align: center;
     padding: 20px;
-    width: calc(25% - 40px);
-    margin: 20px;
+    flex: 1 0 250px;
+    margin: 10px;
     background-color: #f5f5f5;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;    
+    box-shadow:0 8px 12px grey; 
     transition: transform 0.3s ease-in-out;
+    max-width: 300px;
 }
 
 .service-item:hover {
@@ -358,9 +370,54 @@ nav ul li a:hover {
 }
 
 
+
 #product {
     background-color: #f67280;
+    padding: 50px 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    border-radius: 8px;
 }
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.product-item {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+}
+
+.product-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
 
 #join {
     background-color: #f8b195;
@@ -463,6 +520,42 @@ footer {
     padding: 10px 20px;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
+section {
+    padding: 50px 20px;
+    margin: 20px 0;
+}
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #0056b3;
+}
+.terms-container, .privacy-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.terms-container h2, .privacy-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.terms-container p, .privacy-container p {
+    line-height: 1.6;
+    color: #666;
+}
 
 footer .social-media {
     margin-top: 10px;
@@ -511,7 +604,6 @@ footer .social-media a:hover {
 
 
 
-
 /* Keyframes for fade-in animation */
 @keyframes fadeIn {
     from {
@@ -524,29 +616,7 @@ footer .social-media a:hover {
     }
 }
 
-/* Fade-in effect applied */
-.fade-in {
-    animation: fadeIn 1s ease-in-out forwards; /* Adjust duration and easing as needed */
-}
-
-/* Initially hidden */
-.hidden {
-    opacity: 0;
-}
-
-
-/* Keyframes for fade in and fade out */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
+/* Keyframes for fade-out animation */
 @keyframes fadeOut {
     from {
         opacity: 1;
@@ -558,12 +628,13 @@ footer .social-media a:hover {
     }
 }
 
-/* Class to trigger fade in effect */
+/* Fade-in effect applied */
 .fade-in {
+    opacity: 0; /* Initially hidden */
     animation: fadeIn 0.8s ease-in-out forwards;
 }
 
-/* Class to trigger fade out effect */
+/* Fade-out effect applied */
 .fade-out {
     animation: fadeOut 0.8s ease-in-out forwards;
 }
@@ -572,3 +643,46 @@ footer .social-media a:hover {
 
 
 
+.graph-container {
+     display: flex;
+     align-items: center;
+    flex-direction: column;
+    align-items: center;
+            position: relative;
+           top: 70px;
+            height: 60vh;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        .graph {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .graph path {
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            animation: draw 2s ease-in-out forwards;
+        }
+
+        .line1 { stroke: #007bff; } /* Blue */
+        .line2 { stroke: #28a745; } /* Green */
+        .line3 { stroke: #6c757d; } /* Gray */
+        .line4 { stroke: #17a2b8; } /* Cyan */
+        .line5 { stroke: #ffc107; } /* Yellow */
+
+        @keyframes draw {
+            from {
+                stroke-dasharray: 0, 100;
+            }
+            to {
+                stroke-dasharray: 100, 0;
+            }
+        }
