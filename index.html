@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company Web Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <link rel="stylesheet" href="styles.css">
+    
+
 </head>
 <body>
     <header>
@@ -13,12 +16,14 @@
             <img src="Image1.jpg" alt="Company Logo">
             <span class="company-name">ProfitSpark</span>
         </div>
-        <nav>
+        <nav class="navbar">
             <div>
                 <a href="#who-we-are">Who We Are</a>
                 <ul>
                     <li><a href="#who-we-are">About Us</a></li>
-                    <li><a href="#who-we-are">Our Team</a></li>
+                    <li><a href="#our-mission">Our Mission</a></li>
+                    <li><a href="#our-values">Our Values</a></li>
+                    <li><a href="#our-team">Our Team</a></li>
                 </ul>
             </div>
             <div>
@@ -35,7 +40,7 @@
                     <li><a href="#product">Product 2</a></li>
                 </ul>
             </div>
-            <a href="#join">Join</a>
+            <a href="#join" id="join-link">Join</a>
         </nav>
     </header>
     
@@ -61,23 +66,110 @@
 </div>
 
 
-        <section id="who-we-are" class="section">
-            <h2>Who We Are</h2>
-            <p>Line of text about who we are.</p>
-        </section>
-        <section id="service" class="section">
-            <h2>Our Services</h2>
-            <p>Line of text about services.</p>
-        </section>
-        <section id="product" class="section">
+<section id="who-we-are" class="section ">
+    <h2 align="center">Who We Are</h2>
+    <p>At <strong>ProfitSpark</strong>, we are dedicated to transforming businesses by leveraging cutting-edge technology and innovative strategies. Our mission is to empower organizations to reach their full potential by providing comprehensive solutions that drive growth, efficiency, and profitability.</p>
+
+    <h3 id="our-mission">Our Mission</h3>
+    <p>Our mission is to ignite growth and innovation within businesses through a combination of expert consulting, advanced analytics, and tailored support services. We strive to build long-lasting partnerships based on trust, transparency, and mutual success.</p>
+
+    <h3 id="our-values">Our Values</h3>
+    <ul>
+        <li><strong>Integrity:</strong> We uphold the highest standards of integrity in all our actions.</li>
+        <li><strong>Innovation:</strong> We embrace innovation to create value for our clients and adapt to a rapidly changing world.</li>
+        <li><strong>Excellence:</strong> We pursue excellence in every aspect of our work, ensuring the highest quality of service.</li>
+        <li><strong>Collaboration:</strong> We believe in the power of collaboration, working closely with our clients to achieve shared goals.</li>
+        <li><strong>Customer Focus:</strong> We are committed to understanding and meeting the unique needs of each client.</li>
+    </ul>
+
+    <h3 id="our-team">Our Team</h3>
+    <p>Our team consists of seasoned professionals with diverse backgrounds in consulting, technology, and business management. We bring a wealth of experience and expertise to every project, ensuring that we deliver solutions that are not only effective but also sustainable. Meet our team of passionate individuals who are dedicated to making a difference:</p>
+    <ul class="team-list">
+        <li>
+            <img src="Tushar.jpg" alt="Tushar">
+            <div>
+                <strong>Tushar</strong>
+                <p>CEO & Founder - With over 20 years of experience in business transformation, Tushar leads ProfitSpark with a vision for innovation and excellence.</p>
+                <div class="social-links">
+                            <a href="https://instagram.com/i_am_tushar_j" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="mailto:tushar@company.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>    
+            
+        </li>
+        <li>
+            <img src="Rushi.jpg" alt="John Smith">
+            <div>
+                <strong>Rushi</strong>
+                <p>CTO - A technology enthusiast, Rushi drives our technical strategy and ensures we leverage the latest advancements to benefit our clients.</p>
+                <div class="social-links">
+                            <a href="https://instagram.com/tushar_profile" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="mailto:tushar@company.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <img src="Abhi.jpg" alt="Mary Johnson">
+            <div>
+                <strong>Abhi</strong>
+                <p>Head of Consulting - Abhi expertise in business strategy and operations helps our clients navigate complex challenges and achieve their goals.</p>
+                <div class="social-links">
+                            <a href="https://instagram.com/tushar_profile" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="mailto:tushar@company.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <img src="Swapnil.jpg" alt="Emily Davis">
+            <div>
+                <strong>Swapnil</strong>
+                <p>Director of Customer Success - Swapnil is dedicated to ensuring that our clients receive the best support and achieve outstanding outcomes from our solutions.</p>
+                <div class="social-links">
+                            <a href="https://instagram.com/i_am_tushar_j" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="mailto:tushar@company.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <p>Join us on our journey to spark growth and unlock new opportunities for your business. Discover how we can help you achieve your strategic objectives and stay ahead in a competitive market.</p>
+</section>
+
+<section id="service" class="section">
+    <h2>Our Services</h2>
+    <div class="services-container">
+        <div class="service-item">
+            <i class="fas fa-chart-line"></i>
+            <h3>Strategic Consulting</h3>
+            <p>Transform your business with our strategic consulting services tailored to your industry needs.</p>
+        </div>
+        <div class="service-item">
+            <i class="fas fa-headset"></i>
+            <h3>Dedicated Support</h3>
+            <p>24/7 support to ensure your operations run smoothly and efficiently.</p>
+        </div>
+        <div class="service-item">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Digital Solutions</h3>
+            <p>Drive innovation with our cutting-edge digital transformation solutions.</p>
+        </div>
+        <div class="service-item">
+            <i class="fas fa-users"></i>
+            <h3>Customer Experience</h3>
+            <p>Enhance customer satisfaction and loyalty with our tailored customer experience strategies.</p>
+        </div>
+    </div>
+</section>
+
+        <section id="product" class="section ">
             <h2>Our Products</h2>
             <p>Line of text about products.</p>
         </section>
-        <section id="join" class="section">
+        <section id="join" class="section join-section hidden">
             <h2>Join Us</h2>
             <div class="contact-form">
                 <h2>Want to increase your revenue? Contact Us</h2>
-                <form>
+                <form action="submit.php" method="POST">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required>
@@ -106,5 +198,12 @@
             <a href="mailto:info@yourcompany.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
     </footer>
+    <button id="back-to-top" aria-label="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="script.js">
+    
+</script>
+
 </body>
 </html>
