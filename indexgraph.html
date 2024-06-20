@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Professional Graph Lines</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .graph-container {
+            position: relative;
+            width: 80%;
+            height: 60vh;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .graph {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .graph path {
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            animation: draw 2s ease-in-out forwards;
+        }
+
+        .line1 { stroke: #007bff; } /* Blue */
+        .line2 { stroke: #28a745; } /* Green */
+        .line3 { stroke: #6c757d; } /* Gray */
+        .line4 { stroke: #17a2b8; } /* Cyan */
+        .line5 { stroke: #ffc107; } /* Yellow */
+
+        @keyframes draw {
+            from {
+                stroke-dasharray: 0, 100;
+            }
+            to {
+                stroke-dasharray: 100, 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="graph-container">
+        <svg class="graph" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path class="line1" d="M0,90 C10,80 20,70 30,60 40,50 50,40 60,50 70,60 80,40 90,30 100,20" />
+            <path class="line2" d="M0,80 C10,70 20,60 30,50 40,40 50,30 60,40 70,50 80,30 90,20 100,10" />
+            <path class="line3" d="M0,70 C10,60 20,50 30,40 40,30 50,20 60,30 70,40 80,20 90,10 100,0" />
+            <path class="line4" d="M0,60 C10,50 20,40 30,30 40,20 50,10 60,20 70,30 80,10 90,0 100,10" />
+            <path class="line5" d="M0,50 C10,40 20,30 30,20 40,10 50,0 60,10 70,20 80,0 90,-10 100,0" />
+        </svg>
+    </div>
+</body>
+</html>
